@@ -18,7 +18,7 @@ def conectar_mongo():
         print(e)
         return None
 
-def inserir_aluno(nome, idade, telefone, email, cpf, etnia , faixa_salarial, pessoas_familia, religiao):
+def inserir_aluno(nome, idade, telefone, email, cpf, etnia , faixa_salarial, pessoas_familia, religião):
     collection = conectar_mongo()
     if collection is not None:
         doc = {
@@ -30,11 +30,11 @@ def inserir_aluno(nome, idade, telefone, email, cpf, etnia , faixa_salarial, pes
             "etnia": etnia,
             "faixa_salarial": faixa_salarial,
             "pessoas_familia": pessoas_familia,
-            "religião": religiao
+            "religião": religião
         }
         collection.insert_one(doc)
 
-def inserir_aluno_menor(nome, idade, responsavel, telefone_responsavel, email_responsavel, cpf_responsavel, faixa_salarial, pessoas_familia, religiao):
+def inserir_aluno_menor(nome, idade, responsavel, telefone_responsavel, email_responsavel, cpf_responsavel, faixa_salarial, pessoas_familia, religião):
     collection = conectar_mongo()
     if collection is not None:
         doc = {
@@ -45,7 +45,7 @@ def inserir_aluno_menor(nome, idade, responsavel, telefone_responsavel, email_re
             "email_responsavel": email_responsavel,
             "cpf_responsavel": cpf_responsavel,
             "faixa_salarial": faixa_salarial,
-            "pessoas_família": pessoas_familia,
-            "religião": religiao
+            "pessoas_familia": pessoas_familia,
+            "religião": religião
         }
         collection.insert_one(doc)
