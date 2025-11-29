@@ -12,7 +12,7 @@ class Checks(Enum):
     CPF = auto()
     FAIXA_SALARIAL = auto()
     PESSOAS_FAMILIA = auto()
-    RELIGIAO = auto()
+    RELIGIÃO = auto()
 
 
 def check_data(
@@ -24,7 +24,7 @@ def check_data(
         cpf: str = "76685756268",
         faixa_salarial: str = "0",
         pessoas_familia: str = "0",
-        religiao: str = "",
+        religião: str = "",
 ) -> list[Checks]:
     checks_failed: list[Checks] = []
 
@@ -44,8 +44,8 @@ def check_data(
         checks_failed.append(Checks.FAIXA_SALARIAL)
     if not check_familia(pessoas_familia):
         checks_failed.append(Checks.PESSOAS_FAMILIA)
-    if not check_str(religiao):
-        checks_failed.append(Checks.RELIGIAO)
+    if not check_str(religião):
+        checks_failed.append(Checks.RELIGIÃO)
 
     if checks_failed:
         return checks_failed
