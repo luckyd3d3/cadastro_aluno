@@ -140,7 +140,17 @@ elif menu == "Cadastro":
                 )
 
                 if checks_aluno == [Checks.OK]:
-                    inserir_aluno(nome, idade, telefone, email, cpf)
+                    inserir_aluno(
+                        nome,
+                        idade,
+                        telefone,
+                        email,
+                        cpf,
+                        etnia,
+                        faixa_salarial,
+                        pessoas_familia,
+                        religião
+                    )
                     st.success(f"Aluno {nome} cadastrado com sucesso!")
                     st.balloons()
                 else:
@@ -240,6 +250,9 @@ elif menu == "Cadastro":
                         telefone_responsavel,
                         email_responsavel,
                         cpf_responsavel,
+                        faixa_salarial,
+                        pessoas_familia,
+                        religião
                     )
                     st.success(f"Aluno {nome} cadastrado com sucesso!")
                     st.balloons()
