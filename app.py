@@ -213,9 +213,9 @@ elif menu == "Cadastro":
             if in_check(Checks.PESSOAS_FAMILIA, checks_responsavel):
                 st.warning("Pessoas Familia deve ser uma quantidade.")
 
-            religião = st.text_input("Religião")
+            religiao = st.text_input("Religião")
 
-            if in_check(Checks.RELIGIÃO, checks_responsavel):
+            if in_check(Checks.RELIGIAO, checks_responsavel):
                 st.warning("Religião inválida.")
 
             salvar = st.form_submit_button("Cadastrar")
@@ -239,7 +239,7 @@ elif menu == "Cadastro":
                     cpf=cpf_responsavel,
                     faixa_salarial=faixa_salarial,
                     pessoas_familia=pessoas_familia,
-                    religião=religião,
+                    religiao=religiao,
                 )
 
                 if checks_aluno == [Checks.OK] and checks_responsavel == [Checks.OK]:
@@ -252,7 +252,7 @@ elif menu == "Cadastro":
                         cpf_responsavel,
                         faixa_salarial,
                         pessoas_familia,
-                        religião
+                        religiao
                     )
                     st.success(f"Aluno {nome} cadastrado com sucesso!")
                     st.balloons()
