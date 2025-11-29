@@ -32,11 +32,12 @@ def inserir_aluno(nome, idade, telefone, email, cpf, etnia , faixa_salarial, pes
         }
         collection.insert_one(doc)
 
-def inserir_aluno_menor(nome, idade, responsavel, telefone_responsavel, email_responsavel, cpf_responsavel, faixa_salarial, pessoas_familia, religião):
+def inserir_aluno_menor(nome, etnia, idade, responsavel, telefone_responsavel, email_responsavel, cpf_responsavel, faixa_salarial, pessoas_familia, religião):
     collection = conectar_mongo()
     if collection is not None:
         doc = {
             "nome": nome,
+            "etnia": etnia,
             "idade": idade,
             "responsavel": responsavel,
             "telefone_responsavel": telefone_responsavel,

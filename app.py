@@ -245,6 +245,7 @@ elif menu == "Cadastro":
                 if checks_aluno == [Checks.OK] and checks_responsavel == [Checks.OK]:
                     inserir_aluno_menor(
                         nome,
+                        etnia,
                         idade,
                         responsavel,
                         telefone_responsavel,
