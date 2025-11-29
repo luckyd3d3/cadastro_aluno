@@ -128,15 +128,15 @@ elif menu == "Cadastro":
                 and religião
             ):
                 checks_aluno = check_data(
-                    idade_str,
-                    nome,
-                    telefone,
-                    email,
-                    cpf,
-                    etnia,
-                    faixa_salarial,
-                    pessoas_familia,
-                    religião,
+                    idade=idade_str,
+                    nome=nome,
+                    telefone=telefone,
+                    email=email,
+                    cpf=cpf,
+                    etnia=etnia,
+                    faixa_salarial=faixa_salarial,
+                    pessoas_familia=pessoas_familia,
+                    religião=religião,
                 )
 
                 if checks_aluno == [Checks.OK]:
